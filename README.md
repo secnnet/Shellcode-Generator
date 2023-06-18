@@ -1,33 +1,46 @@
 # Shellcode Generator
 
-This is a Python script that generates shellcode in either C or C# programming languages based on a binary file provided as input.
+This is a Python script that generates shellcode in C and C# programming languages from a binary file. Shellcode is commonly used in software exploitation and security testing for tasks such as code injection and payload execution.
+
+## Features
+
+- Generates C shellcode: The script reads a binary file and converts each byte into its hexadecimal representation, producing C shellcode as output.
+
+- Generates C# shellcode: Similar to the C shellcode, the script generates C# shellcode by prefixing each byte with "0x" and separating them with commas.
+
+- Customizable output format: The C shellcode can be split into multiple lines if a maximum length is reached. The script provides flexibility in adjusting the maximum length.
 
 ## Usage
 
-1. Ensure that you have Python installed on your system.
+1. Make sure you have Python installed on your system.
 
-2. Clone this repository or download the script file directly.
+2. Clone the repository:
 
-3. Open a terminal or command prompt and navigate to the directory where the script is located.
+`git clone https://github.com/your-username/shellcode-generator.git`
+
+3. Navigate to the project directory:
+
+`cd shellcode-generator`
 
 4. Run the script with the following command:
-    ```
-python shellcode_generator.py file.bin c|cs
-    ```
 
-Replace `file.bin` with the path to the binary file you want to generate shellcode from. The second argument should be either "c" for C shellcode or "cs" for C# shellcode.
+`python shellcode_generator.py <filename> <output_language>`
 
-5. The generated shellcode will be printed to the console.
+- `<filename>`: The name of the binary file you want to generate shellcode from.
+- `<output_language>`: Specify the output language as either "c" for C shellcode or "cs" for C# shellcode.
 
-## Requirements
+5. The generated shellcode will be displayed in the console.
 
-- Python 3.x
+## Examples
+
+To generate C shellcode from a binary file named "payload.bin", run the following command:
+
+`python shellcode_generator.py payload.bin c`
+
+To generate C# shellcode from the same file, use:
+
+`python shellcode_generator.py payload.bin cs`
 
 ## License
 
-This script is licensed under the [MIT License](LICENSE).
-
-## Disclaimer
-
-Please note that shellcode generation and usage may have legal and ethical implications. This script is provided for educational and research purposes only. Use it responsibly and at your own risk.
-
+This project is licensed under the [MIT License](LICENSE).
